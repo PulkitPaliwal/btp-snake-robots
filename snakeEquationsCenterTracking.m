@@ -84,7 +84,7 @@ end
 for i = 1:N-1
 %     fi_z = param.ampli_u*sin(param.omega_u*t+(i-1)*param.delta_u);
     fi_z = novel_wave(t, param.ampli_u, param.omega_u, i, param.delta_u);
-    fi_z = fi_z+fi0;
+    fi_z = fi_z;%+fi0;
     u(i) = Kp*(fi_z-fi(i))-Kd*fiDot(i); %control law
 end
 
